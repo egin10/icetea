@@ -1,0 +1,23 @@
+{
+  "name": "icetea",
+  "version": "0.0.1",
+  "description": "bot discord",
+  "main": "ice.js",
+  "scripts": {
+    "start": "node ice.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/egin10/icetea.git"
+  },
+  "author": "egin10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/egin10/icetea/issues"
+  },
+  "homepage": "https://gitlab.com/egin10/icetea#README",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "ms": "^2.1.1"
+  }
+}
