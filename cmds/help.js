@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("Command List")
     .addField("IceTea", "`help, ping, botinfo, avatar, serverinfo, serverroles, userinfo`")
     .addField("Moderation", "`Cooming soon...`")
-    .addField("Info Perintah", "ice?<perintah> help")
+    .addField("Info Command", "ice?<command> help")
     .addField("Link", "[Invite](https://discordapp.com/api/oauth2/authorize?client_id=446436555985256448&permissions=1391470694&scope=bot)")
     .setTimestamp(new Date());
     
