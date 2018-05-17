@@ -11,14 +11,17 @@ module.exports.run  = async (bot, message, args) => {
 
     let sicon       = message.guild.iconURL;
     let serverEmbed = new Discord.RichEmbed()
-        .setDescription("**Informasi Server**")
+        .setDescription("**Information of Server**")
         .setColor("#610768")
         .setThumbnail(sicon)
-        .addField("Nama Server", message.guild.name)
-        .addField("Dibuat pada", message.guild.createdAt)
-        .addField("Kamu masuk pada", message.guild.joinedAt)
-        .addField("Pemilik Server", message.guild.owner)
-        .addField("Total Anggota", message.guild.memberCount);
+        .addField("Server Name", message.guild.name)
+        .addField("Owner", message.guild.owner)
+        .addField("Members", message.guild.memberCount)
+        .addField("Region", message.guild.region)
+        .addField("Create On", message.guild.createdAt)
+        .addField("Join At", message.guild.joinedAt)
+        .addField("Roles", "Type \`\`ice?serverroles\`\` to see the roles in this server!")
+        .setTimestamp(new Date());
 
     message.channel.send(serverEmbed);
 }

@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
      */
     let user = message.mentions.users.first();
     let author = message.author;
-
+    var roles = message.member.roles.array().slice(1).sort((a, b) => a.comparePositionTo(b)).reverse().map(role => `<@&${role.id}>`);
+    if (roles.length < 1) roles = ['None'];
     let status = {
         online: "<:online:435163118591672343> Online",
         idle: "<:away:435163118692335616> Idle",
@@ -25,8 +26,10 @@ module.exports.run = async (bot, message, args) => {
     .addField("ID", user.id, true)
     .addField("Username", user.username, true)
     .addField("Status", status[user.presence.status], true)
-    .addField("Bot ?", user.bot ? `yap \:robot\:` : `bukan`, true)
-    .addField("Roles", message.mentions.roles);
+    .addField("Bot ?", user.bot ? `Yap \:robot\:` : `No`, true)
+    .addField("Roles", `${roles.join(', ')}`, true)
+    .addField("Join On", message.guild.joinedAt)
+    .setTimestamp(new Date());
 
     message.channel.send(uEmbed);
 }

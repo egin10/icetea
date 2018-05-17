@@ -21,6 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("RANDOM")
         .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
         .addField(`:outbox_tray: Output`, `\`\`\`js\n${code}\n\`\`\``)
+        .setTimestamp(new Date());
         message.channel.send(embed)
     } catch(e) {
         message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
