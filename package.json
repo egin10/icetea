@@ -18,6 +18,7 @@
   "homepage": "https://gitlab.com/egin10/icetea#README",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "google-translate-api": "^2.3.0",
     "ms": "^2.1.1",
     "sqlite": "^2.9.2"
   }
