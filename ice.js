@@ -60,6 +60,23 @@ bot.on("message", async message => {
     let command = message.content.toLowerCase().split(' ')[0];
     command = command.slice(prefix.length);
 
+    let infoMusic = new Discord.RichEmbed()
+        .setTitle("Usage **Music**")
+        .setColor("RANDOM")
+        .addField("List Commands", `-play | p = play song \n
+-skip | sk = skip song. \n
+-stop | st = stop music. \n
+-volume <value> | vol <value> = change volume music (1 - 5). \n
+-np = Now Playing or current song. \n
+-queue | q = list of songs. \n
+-pause = pause a music. \n
+-resume = resume a music. \n
+-leave | l = leave a bot from voice. \n
+-join | j = join a bot to voice.`)
+        .addField("Command", "ice?play song | ice?p song")
+        .setTimestamp(new Date());
+    if(command === "music") return message.channel.send(infoMusic);
+
     if (command === 'play' || command === 'p') {
 		const voiceChannel = message.member.voiceChannel;
 		if (!voiceChannel) return message.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
