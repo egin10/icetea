@@ -12,8 +12,6 @@ module.exports.run = async (bot, message, args) => {
     let _to   = args[0];
     let mes  = args.join(" ").slice(3);
 
-    if(!args[0]) {return;}
-    else {let think = await message.channel.send(`Hmm... let me think... :thinking: `);}
     //help
     let info = new Discord.RichEmbed()
         .setTitle("Usage **Translate**")
@@ -34,6 +32,11 @@ module.exports.run = async (bot, message, args) => {
         .addField("code : Language", langTwo)
         .setTimestamp(new Date());
     if(args[0] == "langs") return message.channel.send(aLangs);
+
+    if(!args[0]) {
+        return;
+    } else {
+    let think = await message.channel.send(`Hmm... let me think... :thinking: `);
 
     //translate process
     translate(mes, {to: _to}).then(res => {
@@ -56,6 +59,7 @@ module.exports.run = async (bot, message, args) => {
         .setTimestamp(new Date());
         message.channel.send(embed);
     });
+    }
 }
 
 module.exports.help = {
