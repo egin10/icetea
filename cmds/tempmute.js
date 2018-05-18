@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
      * 
      * egin10
      */
+    if(!args[0]) return;
     let info = new Discord.RichEmbed()
         .setTitle("Usage **tempmute**")
         .setColor("RANDOM")
