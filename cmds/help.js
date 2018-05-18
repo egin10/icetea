@@ -22,7 +22,10 @@ module.exports.run = async (bot, message, args) => {
     .addField("Link", "[Invite](https://discordapp.com/api/oauth2/authorize?client_id=446436555985256448&permissions=1391470694&scope=bot)")
     .setTimestamp(new Date());
     
-    message.channel.send(help);
+    setTimeout(()=>{
+        ask.delete();
+        message.channel.send(help);
+    }, 2000);
 }
 
 module.exports.help = {
