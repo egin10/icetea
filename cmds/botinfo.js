@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const config = require("./../conf/bot.json");
+const {prefix} = require("./../conf/bot.json");
 
 module.exports.run  = async (bot, message, args) => {
 
@@ -17,7 +17,7 @@ module.exports.run  = async (bot, message, args) => {
         .setThumbnail(bicon)
         .addField("Bot Name", bot.user.username)
         .addField("Create On", bot.user.createdAt)
-        .addField("Prefix", config.prefix)
+        .addField("Prefix", prefix)
         .addField("Owner", "It'sMe#0184")
         .setTimestamp(new Date());
 
