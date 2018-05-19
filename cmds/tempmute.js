@@ -13,8 +13,9 @@ module.exports.run = async (bot, message, args) => {
     let info = new Discord.RichEmbed()
         .setTitle("Usage **tempmute**")
         .setColor("RANDOM")
-        .addField("Command", "ice?tempmute @member time")
-        .addField("Tempmute", "Mute member based on the time specified.");
+        .addField("Command", "**ice?tempmute @member time**")
+        .addField("Tempmute", "Mute member based on the time specified.")
+        .setTimestamp(new Date());
     if(args[0] == "help") return message.channel.send(info);
 
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));

@@ -17,8 +17,8 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("Usage **Translate**")
         .setColor("RANDOM")
         .addField("Command", "ice?translate <code lang> text")
-        .addField("Tempmute", "Translating a text to another language.")
-        .addField("Available Languages ", "\`\`ice?translate langs \`\`")
+        .addField("Description", "Translating a text to another language.")
+        .addField("Available Languages ", "**ice?translate langs**")
         .setTimestamp(new Date());
     if(args[0] == "help") return message.channel.send(info);
 

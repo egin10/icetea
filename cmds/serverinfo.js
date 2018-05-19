@@ -20,7 +20,7 @@ module.exports.run  = async (bot, message, args) => {
         .addField("Region", message.guild.region)
         .addField("Create On", message.guild.createdAt)
         .addField("Join At", message.guild.joinedAt)
-        .addField("Roles", "Type \`\`ice?serverroles\`\` to see the roles in this server!")
+        .addField("Roles", "Type **ice?serverroles** to see the roles in this server!")
         .setTimestamp(new Date());
 
     message.channel.send(serverEmbed);
