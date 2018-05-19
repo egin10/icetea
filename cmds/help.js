@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("**Hai! I'm IceTea.** :tropical_drink: ")
     .setDescription("Command List")
     .addField("IceTea", "`help, ping, botinfo, avatar, serverinfo, serverroles, userinfo`")
-    .addField("Moderation", "`tempmute, mutetime`")
+    .addField("Moderation", "`tempmute, mutetime, warn`")
     .addField("Utils", "`translate`")
     .addField("Music", "`join, play, skip, stop, volume, np (now playing), queue, pause, resume, leave \nmore info : ice?music`")
     .addField("Info Command", "**ice?<command> help**")
